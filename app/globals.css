@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+html, body { background: #0F0F10; color: #FFFFFF; }
+body { -webkit-tap-highlight-color: transparent; overscroll-behavior-y: none; }
+
+@layer components {
+  .card { @apply rounded-2xl bg-card border border-line; }
+  .btn-lime {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-lime px-4 py-3 font-bold text-black
+           transition active:scale-[0.98] disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+  .btn-violet {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-violet px-4 py-3 font-bold text-white
+           transition active:scale-[0.98] disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-transparent px-4 py-3 font-semibold text-white
+           transition active:scale-[0.98] disabled:opacity-40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+  }
+  .field {
+    @apply w-full rounded-xl border border-line bg-bg px-3 py-3 text-white placeholder:text-muted
+           focus:border-lime focus:outline-none;
+  }
+  .chip {
+    @apply rounded-full border border-line px-3 py-1.5 text-sm text-white transition active:scale-95;
+  }
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type='number'] { -moz-appearance: textfield; }
+
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

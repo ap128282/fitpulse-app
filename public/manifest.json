@@ -1,0 +1,14 @@
+{
+  "name": "FitPulse",
+  "short_name": "FitPulse",
+  "description": "Coach de musculation IA : surcharge progressive RIR, séances intelligentes, suivi.",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0F0F10",
+  "theme_color": "#0F0F10",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
